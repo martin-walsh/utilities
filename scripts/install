@@ -1,0 +1,52 @@
+#!/bin/bash
+BASEDIR=$(cd "$(dirname "$0")"; pwd)
+printf "installing scripts to ~/bin\n"
+
+# Dev scripts:
+ln -s -f -v $BASEDIR/bash/check-version.sh ~/bin/check-version
+ln -s -f -v $BASEDIR/groovy/resetIntelliJLayout.groovy ~/bin/resetIntelliJLayout
+ln -s -f -v $BASEDIR/groovy/xmlToClosure.groovy ~/bin/xmlToClosure
+ln -s -f -v $BASEDIR/groovy/queryApp.groovy ~/bin/queryApp
+ln -s -f -v $BASEDIR/bash/update-config.sh ~/bin/update-config
+ln -s -f -v $BASEDIR/bash/search-dependencies.sh ~/bin/search-dependencies
+ln -s -f -v $BASEDIR/bash/jira.sh ~/bin/jira
+ln -s -f -v $BASEDIR/bash/test-report.sh ~/bin/test-report
+ln -s -f -v $BASEDIR/bash/clean-target-dir.sh ~/bin/cleanTarget
+ln -s -f -v $BASEDIR/bash/clean-all-targets.sh ~/bin/cleanAllTargets
+ln -s -f -v $BASEDIR/bash/reset-ssh.sh ~/bin/reset-ssh
+ln -s -f -v $BASEDIR/bash/intellij.sh ~/bin/intellij
+
+ln -s -f -v "$BASEDIR/bash/log-time.sh" ~/bin/logTime
+
+if [ ! -d "~/bin/lib" ]; then
+	mkdir ~/bin/lib
+fi
+
+ln -s -f -v $BASEDIR/bash/cd-scripts.sh ~/bin/lib/cd-scripts.sh
+ln -s -f -v $BASEDIR/bash/completion.sh ~/bin/lib/completion.sh
+ln -s -f -v $BASEDIR/bash/initialize-java-version.sh ~/bin/lib/initialize-java-version
+ln -s -f -v $BASEDIR/bash/switch-java.sh ~/bin/lib/switch-java
+ln -s -f -v $BASEDIR/bash/ssh-completion.sh ~/bin/lib/ssh-completion
+
+# GIT scripts:
+ln -s -f -v $BASEDIR/bash/git-prune-all.sh ~/bin/git-prune-all
+ln -s -f -v $BASEDIR/bash/git-prune-repo.sh ~/bin/git-prune-repo
+ln -s -f -v $BASEDIR/bash/git-checkout-all.sh ~/bin/git-checkout-all
+ln -s -f -v $BASEDIR/bash/git-checkout-prod-version.sh ~/bin/git-checkout-prod-version
+ln -s -f -v $BASEDIR/bash/hub.sh ~/bin/hub
+
+# Private:
+ROOTDIR="$(dirname "$BASEDIR")"
+if [ -d "$ROOTDIR/private" ]; then
+	ln -s -f -v $BASEDIR/private/ssh-aliases.sh ~/bin/lib/ssh-aliases.sh
+	$BASEDIR/groovy/generateSshConfig.groovy $ROOTDIR/private
+fi
+
+# Environment Settings:
+ln -s -f -v $BASEDIR/bash/.bash_profile ~/.bash_profile
+ln -s -f -v $BASEDIR/bash/.inputrc ~/.inputrc
+
+printf "\n"
+printf "Add to bash_profile: alias resetIntelliJLayout=\"groovy ~/bin/resetIntelliJLayout\"\n"
+printf "Add to bash_profile: alias xmlToClosure=\"groovy ~/bin/xmlToClosure\"\n"
+printf "done!\n"
