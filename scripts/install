@@ -38,7 +38,7 @@ ln -s -f -v $BASEDIR/bash/hub.sh ~/bin/hub
 # Private:
 ROOTDIR="$(dirname "$BASEDIR")"
 if [ -d "$ROOTDIR/private" ]; then
-	ln -s -f -v $BASEDIR/private/ssh-aliases.sh ~/bin/lib/ssh-aliases.sh
+	ln -s -f -v $ROOTDIR/private/ssh-aliases.sh ~/bin/lib/ssh-aliases.sh
 	$BASEDIR/groovy/generateSshConfig.groovy $ROOTDIR/private
 fi
 
