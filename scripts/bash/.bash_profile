@@ -57,6 +57,8 @@ alias mysql_restart="sudo /usr/local/mysql/support-files/mysql.server restart"
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/martinwalsh/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/martinwalsh/.sdkman/bin/sdkman-init.sh"
 
+alias gvm="sdk"
+
 eval "$(rbenv init -)"
 
 source $HOME/bin/lib/initialize-java-version
