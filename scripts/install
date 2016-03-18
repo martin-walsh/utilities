@@ -40,6 +40,8 @@ ROOTDIR="$(dirname "$BASEDIR")"
 if [ -d "$ROOTDIR/private" ]; then
 	ln -s -f -v $ROOTDIR/private/ssh-aliases.sh ~/bin/lib/ssh-aliases.sh
 	$BASEDIR/groovy/generateSshConfig.groovy $ROOTDIR/private
+
+	ln -s -f -v $ROOTDIR/private/env.sh ~/bin/lib/env.sh
 fi
 
 # Environment Settings:

@@ -12,6 +12,8 @@ export SITEMINDER_HOME=$HOME/siteminder/siteminder-home
 export SITEMINDER_USER=martinwalsh
 export DEBUG_JVM=0
 
+source $HOME/bin/lib/env.sh
+
 complete -C $HOME/dotfiles/public/bash/completion_scripts/grails_completion -o default grails
 complete -C $HOME/dotfiles/public/bash/completion_scripts/list_apps_completion -o default list
 complete -C $HOME/dotfiles/public/bash/completion_scripts/rake_completion -o default rake
