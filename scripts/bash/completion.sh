@@ -43,7 +43,7 @@ complete -o nospace -F _complete_cdp_folders cdp
 
 
 _complete_hub () {
-	opts=("compare commits branches releases")
+	opts=("compare commits branches releases show")
 	_complete $opts
 }
 complete -o nospace -F _complete_hub hub

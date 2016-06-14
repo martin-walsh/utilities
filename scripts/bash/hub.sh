@@ -21,6 +21,8 @@ elif [[ "$1" == "branches" ]]; then
 	param="branches/all"
 elif [[ "$1" == "releases" ]]; then
 	param="releases"
+elif [[ "$1" == "show" ]]; then
+	param="commit/$2"
 fi
 
 open "$projectUrl/$param"
