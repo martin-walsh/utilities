@@ -36,4 +36,6 @@ gitConfigFile.write """[user]
   default = current
 [log]
   decorate = true
+[url "https://github"]
+  insteadOf = git://github
 """
