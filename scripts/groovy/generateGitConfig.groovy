@@ -23,6 +23,7 @@ gitConfigFile.write """[user]
   ba = branch -a
   rpo = remote prune origin
   undo = reset HEAD~1 --soft
+  wip = commit -am WIP
 [apply]
   whitespace = nowarn
 [color]
