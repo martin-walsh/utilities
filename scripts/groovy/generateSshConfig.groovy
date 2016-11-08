@@ -10,7 +10,10 @@ def config = new ConfigSlurper().parse(new File("${args[0]}/ssh-config.groovy").
 
 def globalConfig = config.global
 
-def staticConfigLines = """# All uswest2/stg connections (except bastion) go through bastion
+def staticConfigLines = """Host *
+    AddKeysToAgent yes
+
+# All uswest2/stg connections (except bastion) go through bastion
 Host bastion.uswest2.siteminder.com bastion.stg.siteminder.com
     ProxyCommand none
 
