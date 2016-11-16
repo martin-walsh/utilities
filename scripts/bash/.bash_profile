@@ -12,6 +12,8 @@ export SITEMINDER_HOME=$HOME/siteminder/siteminder-home
 export SITEMINDER_USER=martinwalsh
 export DEBUG_JVM=0
 
+export IDEA_VM_OPTIONS=$HOME/idea.vmoptions
+
 source $HOME/bin/lib/env.sh
 
 complete -C $HOME/dotfiles/public/bash/completion_scripts/grails_completion -o default grails
