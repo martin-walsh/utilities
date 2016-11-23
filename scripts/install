@@ -18,10 +18,14 @@ ln -s -f -v $BASEDIR/bash/intellij.sh ~/bin/intellij
 ln -s -f -v $BASEDIR/bash/create-ram-disk.sh ~/bin/create-ram-disk
 ln -s -f -v $BASEDIR/bash/delete-ram-disk.sh ~/bin/delete-ram-disk
 
+# MySQL
+ln -s -f -v $BASEDIR/bash/setup-mysql-ramdisk.sh ~/bin/setup-mysql-ramdisk
+ln -s -f -v $BASEDIR/bash/teardown-mysql-ramdisk.sh ~/bin/teardown-mysql-ramdisk
+
 ln -s -f -v "$BASEDIR/bash/log-time.sh" ~/bin/logTime
 
 if [ ! -d "~/bin/lib" ]; then
-	mkdir ~/bin/lib
+	mkdir -p ~/bin/lib
 fi
 
 ln -s -f -v $BASEDIR/bash/cd-scripts.sh ~/bin/lib/cd-scripts.sh
@@ -46,6 +50,8 @@ if [ -d "$ROOTDIR/private" ]; then
 	$BASEDIR/groovy/generateGitConfig.groovy $ROOTDIR/private
 
 	ln -s -f -v $ROOTDIR/private/env.sh ~/bin/lib/env.sh
+
+	ln -s -f -v $ROOTDIR/private/create-ramdisk-database.sh ~/bin/lib/create-ramdisk-database.sh
 fi
 
 # Environment Settings:
