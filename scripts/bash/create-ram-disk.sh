@@ -5,5 +5,8 @@ if [[ -z "$1" ]]; then
 else
 	SIZE="$(( $1 * 2048 ))"
 fi
+DISK_ID=$(hdiutil attach -nomount ram://$SIZE)
 
-diskutil erasevolume HFS+ 'RAM Disk' `hdiutil attach -nomount ram://$SIZE`
+diskutil erasevolume HFS+ 'ram_disk' $DISK_ID
+
+printf "RAM Disk mounted at /Volumes/ram_disk\n"
