@@ -54,7 +54,9 @@ Host *.siteminder.com *.siteminder.com.au *.thebookingbutton.com *.littlehotelie
 # Global defaults
 Host *
     Compression yes
-
+    UseKeychain yes
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/id_rsa
 """
 
 sshConfigFile.write staticConfigLines
