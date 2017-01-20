@@ -57,6 +57,8 @@ innodb_checksum_algorithm = none
 
 # The following options will be passed to all MySQL clients
 [client]
+user            = root
+password        = xxx
 port            = $MYSQL_PORT
 socket          = $MYSQL_SOCKET
 default-character-set = utf8
@@ -73,8 +75,8 @@ sleep 5
 
 
 echo "Started MySQL"
-$MYSQL_BASEDIR/bin/mysqladmin --defaults-file=$MYSQL_CONFIG_FILE -u root password 'xxx'
+$MYSQL_BASEDIR/bin/mysqladmin --defaults-file=$MYSQL_CONFIG_FILE -u root
 
 source $HOME/bin/lib/create-ramdisk-database.sh
 
-echo "Login using: mysql -P $MYSQL_PORT -u root -pxxx -S $MYSQL_SOCKET"
+echo "Login using: mysql -P $MYSQL_PORT -u root -S $MYSQL_SOCKET"
