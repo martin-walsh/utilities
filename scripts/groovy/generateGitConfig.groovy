@@ -24,6 +24,7 @@ gitConfigFile.write """[user]
   rpo = remote prune origin
   undo = reset HEAD~1 --soft
   wip = commit -am WIP
+  logtag = tag -l -n9 --sort=v:refname
 [apply]
   whitespace = nowarn
 [color]
