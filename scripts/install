@@ -52,6 +52,8 @@ if [ -d "$ROOTDIR/private" ]; then
 	ln -s -f -v $ROOTDIR/private/env.sh ~/bin/lib/env.sh
 
 	ln -s -f -v $ROOTDIR/private/create-ramdisk-database.sh ~/bin/lib/create-ramdisk-database.sh
+
+	ln -s -f -v $ROOTDIR/private/buildnet.sh ~/bin/buildnet.sh
 fi
 
 # Environment Settings:
