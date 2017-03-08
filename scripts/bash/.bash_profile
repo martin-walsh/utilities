@@ -35,7 +35,7 @@ alias lal="ls -alp"
 
 alias g="grails -reloading"
 alias gd="grails-debug -reloading"
-alias gt="grails test-app"
+alias gt="grails -DskipBower=true test-app"
 alias gl="grails test load-sample-data"
 alias glog="grails --plain-output"
 alias gmi="grails maven-install"
