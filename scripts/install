@@ -17,6 +17,7 @@ ln -s -f -v $BASEDIR/bash/reset-ssh.sh ~/bin/reset-ssh
 ln -s -f -v $BASEDIR/bash/intellij.sh ~/bin/intellij
 ln -s -f -v $BASEDIR/bash/create-ram-disk.sh ~/bin/create-ram-disk
 ln -s -f -v $BASEDIR/bash/delete-ram-disk.sh ~/bin/delete-ram-disk
+ln -s -f -v $BASEDIR/bash/init-terraform.sh ~/bin/init-terraform
 
 # MySQL
 ln -s -f -v $BASEDIR/bash/setup-mysql-ramdisk.sh ~/bin/setup-mysql-ramdisk
