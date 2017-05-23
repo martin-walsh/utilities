@@ -61,6 +61,8 @@ fi
 # Completion
 brew install bash-completion
 curl -o `brew --prefix`/etc/bash_completion.d/docker https://raw.githubusercontent.com/moby/moby/master/contrib/completion/bash/docker
+curl -o `brew --prefix`/etc/bash_completion.d/docker-compose https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose
+
 
 # Environment Settings:
 ln -s -f -v $BASEDIR/bash/.bash_profile ~/.bash_profile
