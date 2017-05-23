@@ -58,6 +58,10 @@ if [ -d "$ROOTDIR/private" ]; then
 	ln -s -f -v $ROOTDIR/private/buildnet.sh ~/bin/buildnet.sh
 fi
 
+# Completion
+brew install bash-completion
+curl -o `brew --prefix`/etc/bash_completion.d/docker https://raw.githubusercontent.com/moby/moby/master/contrib/completion/bash/docker
+
 # Environment Settings:
 ln -s -f -v $BASEDIR/bash/.bash_profile ~/.bash_profile
 ln -s -f -v $BASEDIR/bash/.inputrc ~/.inputrc

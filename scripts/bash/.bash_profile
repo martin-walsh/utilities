@@ -24,6 +24,10 @@ complete -C $HOME/dotfiles/public/bash/completion_scripts/thor_completion -o def
 source $HOME/dotfiles/public/git/git-completion.bash
 source $HOME/bin/lib/cd-scripts.sh
 
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
 source $HOME/bin/lib/completion.sh
 
 source $HOME/bin/lib/docker-scripts.sh
