@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker run --name cmdb --tmpfs /var/lib/mysql:rw --rm -d -p 3306:3306 278521702583.dkr.ecr.us-west-2.amazonaws.com/cm/cm-test-db:mysql_5.6_v2.6.0
+docker run --name cmdb --tmpfs /var/lib/mysql:rw --rm -d -p 3306:3306 278521702583.dkr.ecr.us-west-2.amazonaws.com/cm/cm-test-db:mysql_5.6_cm_master
 
 until docker exec cmdb mysqladmin --silent ping; do
   echo "Waiting for mysqld to start. Retry in 5s..."
