@@ -7,7 +7,6 @@ ln -s -f -v $BASEDIR/bash/check-version.sh ~/bin/check-version
 ln -s -f -v $BASEDIR/groovy/resetIntelliJLayout.groovy ~/bin/resetIntelliJLayout
 ln -s -f -v $BASEDIR/groovy/xmlToClosure.groovy ~/bin/xmlToClosure
 ln -s -f -v $BASEDIR/groovy/queryApp.groovy ~/bin/queryApp
-ln -s -f -v $BASEDIR/bash/update-config.sh ~/bin/update-config
 ln -s -f -v $BASEDIR/bash/search-dependencies.sh ~/bin/search-dependencies
 ln -s -f -v $BASEDIR/bash/buildkite.sh ~/bin/buildkite
 ln -s -f -v $BASEDIR/bash/jira.sh ~/bin/jira
