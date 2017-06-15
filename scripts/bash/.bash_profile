@@ -3,7 +3,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lo
 export HISTCONTROL=ignoredups
 export HISTSIZE=10000
 # export PS1='\[\033[01;32m\]\h\[\033[01;34m\] \W\[\033[31m\]$(__git_ps1 " {%s}") \[\033[01;34m\]\u\$\[\033[00m\] ' # WITH COLOUR
-export PS1='\t :\W\[$(__git_ps1 " {%s}\]")\$ ' # NO COLOUR
+export PS1='\t :\W$(__git_ps1 " {%s}")\$ ' # NO COLOUR
 export GIT_PS1_SHOWUPSTREAM="verbose git"
 export GIT_PS1_SHOWDIRTYSTATE=1
 
