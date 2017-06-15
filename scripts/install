@@ -16,8 +16,6 @@ ln -s -f -v $BASEDIR/bash/clean-target-dir.sh ~/bin/cleanTarget
 ln -s -f -v $BASEDIR/bash/clean-all-targets.sh ~/bin/cleanAllTargets
 ln -s -f -v $BASEDIR/bash/reset-ssh.sh ~/bin/reset-ssh
 ln -s -f -v $BASEDIR/bash/intellij.sh ~/bin/intellij
-ln -s -f -v $BASEDIR/bash/create-ram-disk.sh ~/bin/create-ram-disk
-ln -s -f -v $BASEDIR/bash/delete-ram-disk.sh ~/bin/delete-ram-disk
 ln -s -f -v $BASEDIR/bash/init-terraform.sh ~/bin/init-terraform
 
 # MySQL
@@ -54,7 +52,7 @@ if [ -d "$ROOTDIR/private" ]; then
 
 	ln -s -f -v $ROOTDIR/private/env.sh ~/bin/lib/env.sh
 
-	ln -s -f -v $ROOTDIR/private/create-ramdisk-database.sh ~/bin/lib/create-ramdisk-database.sh
+	ln -s -f -v $ROOTDIR/private/migrate-database.sh ~/bin/lib/migrate-database.sh
 
 	ln -s -f -v $ROOTDIR/private/buildnet.sh ~/bin/buildnet.sh
 fi
