@@ -58,7 +58,7 @@ fi
 
 # Completion
 brew install bash-completion
-curl -o `brew --prefix`/etc/bash_completion.d/docker https://raw.githubusercontent.com/moby/moby/master/contrib/completion/bash/docker
+curl -o `brew --prefix`/etc/bash_completion.d/docker https://raw.githubusercontent.com/docker/cli/master/contrib/completion/bash/docker
 curl -o `brew --prefix`/etc/bash_completion.d/docker-compose https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose
 curl -o `brew --prefix`/etc/bash_completion.d/terraform https://raw.githubusercontent.com/Bash-it/bash-it/master/completion/available/terraform.completion.bash
 curl -o `brew --prefix`/etc/bash_completion.d/npm https://raw.githubusercontent.com/Bash-it/bash-it/master/completion/available/npm.completion.bash
