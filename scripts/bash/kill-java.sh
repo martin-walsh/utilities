@@ -1,4 +1,4 @@
 #!/bin/bash
 
-pkill -9 -f cm-core-api
+pkill -9 -f java
 ps -ef | grep java
