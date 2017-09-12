@@ -5,5 +5,15 @@ gns () {
 }
 
 gn () {
-	gns | egrep "^$2 .*" | cut -d ' ' -f 3 | xargs git $1
+
+	## Build regex for adding multiple at once
+	str="["
+	for i in "${@:2}"; do
+		str="${str}${i}|"
+	done
+	str_len=${#str}
+	str=${str: : $str_len -1}
+	str="${str}]"
+
+	gns | egrep "^$str .*" | cut -d ' ' -f 3 | xargs git $1
 }
