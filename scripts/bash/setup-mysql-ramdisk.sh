@@ -1,6 +1,10 @@
 #!/bin/bash
 
-docker run --name aridb --tmpfs /var/lib/mysql:rw --rm -d -p 3307:3306 278521702583.dkr.ecr.us-west-2.amazonaws.com/cm/cm-test-db:mysql_5.6_cm_ari_ari
+docker pull 278521702583.dkr.ecr.us-west-2.amazonaws.com/cm/cm-test-db:mysql_5.6_cm_ari_master
+
+docker pull 278521702583.dkr.ecr.us-west-2.amazonaws.com/cm/cm-test-db:mysql_5.6_cm_master
+
+docker run --name aridb --tmpfs /var/lib/mysql:rw --rm -d -p 3307:3306 278521702583.dkr.ecr.us-west-2.amazonaws.com/cm/cm-test-db:mysql_5.6_cm_ari_master
 
 docker run --name cmdb --tmpfs /var/lib/mysql:rw --rm -d -p 3306:3306 278521702583.dkr.ecr.us-west-2.amazonaws.com/cm/cm-test-db:mysql_5.6_cm_master
 
