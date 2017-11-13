@@ -22,11 +22,9 @@ Host *.uswest2
 
 Host *.stg
     ProxyCommand ssh ${globalConfig.bastionStg} nc %h ${globalConfig.port}
- 
- 
-# All old dev env connections go through services01.glo
-Host *.smuat.siteminder.com *.smtpi.siteminder.com *.dev.siteminder.com *.bbuat.siteminder.com *.bbtpi.siteminder.com *.lhbbtpi.siteminder.com *.lhbbuat.siteminder.com
-    ProxyCommand ssh ${globalConfig.glo} nc %h 222
+
+Host *.dev
+    ProxyCommand ssh ${globalConfig.bastionDev} nc %h ${globalConfig.port}
  
 # Replicated database port forwarding
 Host dbaucm*.uswest2.siteminder.com
