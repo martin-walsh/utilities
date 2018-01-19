@@ -68,6 +68,7 @@ curl -o `brew --prefix`/etc/bash_completion.d/npm https://raw.githubusercontent.
 curl -o `brew --prefix`/etc/bash_completion.d/gradle https://raw.githubusercontent.com/Bash-it/bash-it/master/completion/available/gradle.completion.bash
 curl -o `brew --prefix`/etc/bash_completion.d/kubectl https://raw.githubusercontent.com/Bash-it/bash-it/master/completion/available/kubectl.completion.bash
 curl -o `brew --prefix`/etc/bash_completion.d/helm https://raw.githubusercontent.com/kubernetes/helm/master/scripts/completions.bash
+curl -o `brew --prefix`/etc/bash_completion.d/git https://raw.githubusercontent.com/Bash-it/bash-it/master/completion/available/git.completion.bash
 
 # Environment Settings:
 ln -s -f -v $BASEDIR/bash/.bash_profile ~/.bash_profile
