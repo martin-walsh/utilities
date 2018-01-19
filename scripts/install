@@ -17,13 +17,13 @@ ln -s -f -v $BASEDIR/bash/reset-ssh.sh ~/bin/reset-ssh
 ln -s -f -v $BASEDIR/bash/intellij.sh ~/bin/intellij
 ln -s -f -v $BASEDIR/bash/init-terraform.sh ~/bin/init-terraform
 
+ln -s -f -v /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/bin/sublime
+
 ln -s -f -v $BASEDIR/bash/kill-java.sh ~/bin/kill-java
 
 # MySQL
 ln -s -f -v $BASEDIR/bash/setup-mysql-ramdisk.sh ~/bin/setup-mysql-ramdisk
 ln -s -f -v $BASEDIR/bash/teardown-mysql-ramdisk.sh ~/bin/teardown-mysql-ramdisk
-
-ln -s -f -v "$BASEDIR/bash/log-time.sh" ~/bin/logTime
 
 if [ ! -d "~/bin/lib" ]; then
 	mkdir -p ~/bin/lib
