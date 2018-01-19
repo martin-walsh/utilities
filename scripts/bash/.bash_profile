@@ -26,6 +26,7 @@ fi
 source $HOME/bin/lib/completion.sh
 
 source $HOME/bin/lib/docker-scripts.sh
+source $HOME/bin/lib/git-prompt.sh
 source $HOME/bin/lib/git-scripts.sh
 
 alias reloadShell="source ~/.bash_profile"
