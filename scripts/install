@@ -60,6 +60,19 @@ if [ -d "$ROOTDIR/private" ]; then
 	ln -s -f -v $ROOTDIR/private/buildnet.sh ~/bin/buildnet.sh
 fi
 
+# Homebrew
+if [[ -z /usr/local/bin/brew ]]; then
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+rm `brew --prefix`/etc/bash_completion.d/kubectl
+brew install kubectl
+
+brew install nvm
+
+mkdir -v ~/.nvm
+curl -o ~/.nvm/bash_completion https://raw.githubusercontent.com/creationix/nvm/master/bash_completion
+
 # Completion
 brew install bash-completion
 curl -o `brew --prefix`/etc/bash_completion.d/docker https://raw.githubusercontent.com/docker/cli/master/contrib/completion/bash/docker
@@ -70,6 +83,9 @@ curl -o `brew --prefix`/etc/bash_completion.d/gradle https://raw.githubuserconte
 curl -o `brew --prefix`/etc/bash_completion.d/kubectl https://raw.githubusercontent.com/Bash-it/bash-it/master/completion/available/kubectl.completion.bash
 curl -o `brew --prefix`/etc/bash_completion.d/helm https://raw.githubusercontent.com/kubernetes/helm/master/scripts/completions.bash
 curl -o `brew --prefix`/etc/bash_completion.d/git https://raw.githubusercontent.com/Bash-it/bash-it/master/completion/available/git.completion.bash
+
+curl -o `brew --prefix`/etc/bash_completion.d/nvm https://raw.githubusercontent.com/Bash-it/bash-it/master/completion/available/nvm.completion.bash
+curl -o `brew --prefix`/etc/bash_completion.d/npm https://raw.githubusercontent.com/Bash-it/bash-it/master/completion/available/npm.completion.bash
 
 # Environment Settings:
 ln -s -f -v $BASEDIR/bash/.bash_profile ~/.bash_profile
