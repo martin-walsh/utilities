@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 environment=$TF_VAR_environment
 

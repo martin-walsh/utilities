@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # SCRIPT TO CHEKOUT MASTER FOR ALL REPOS IN DIR.
 

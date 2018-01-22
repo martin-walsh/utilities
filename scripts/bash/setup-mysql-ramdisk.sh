@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 docker pull 278521702583.dkr.ecr.us-west-2.amazonaws.com/cm/cm-test-db:mysql_5.6_cm_ari_master
 

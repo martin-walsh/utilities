@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # SCRIPT TO PULL OUT DEPENDENCY VERSIONS FROM ALL GRAILS APPS IN REPO.
 source $HOME/dotfiles/public/git/git-completion.bash

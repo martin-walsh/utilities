@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 dir=$(basename $PWD)
 branchName=`git branch | grep \* | cut -d ' ' -f 2`

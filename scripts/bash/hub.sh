@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 eval projectUrl=`fgrep -m 1 url .git/config | cut -d ' ' -f 3`
 
 if [[ "$projectUrl" == *"git@"* ]]; then

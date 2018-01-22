@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 branchName=$1
 if [ $# -eq 0 ]
 	then

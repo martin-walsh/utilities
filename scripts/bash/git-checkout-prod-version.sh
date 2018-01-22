@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # SCRIPT TO CHEKOUT PRODUCTION VERSIONS FROM ALL GRAILS APPS IN REPO.
 

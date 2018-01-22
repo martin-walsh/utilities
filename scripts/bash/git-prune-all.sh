@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 eval baseDir=$PWD
 eval repoDir=(`ls`)
 

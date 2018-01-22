@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 gns () {
 	git status -s | awk '{print NR,$0}' | tr -s ' '
