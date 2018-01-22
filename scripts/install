@@ -75,7 +75,6 @@ curl -o `brew --prefix`/etc/bash_completion.d/git https://raw.githubusercontent.
 ln -s -f -v $BASEDIR/bash/.bash_profile ~/.bash_profile
 ln -s -f -v $BASEDIR/bash/.inputrc ~/.inputrc
 
-printf "\n"
-printf "Add to bash_profile: alias resetIntelliJLayout=\"groovy ~/bin/resetIntelliJLayout\"\n"
-printf "Add to bash_profile: alias xmlToClosure=\"groovy ~/bin/xmlToClosure\"\n"
-printf "done!\n"
+# AWS
+curl -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py --user && rm get-pip.py
+python -m pip install awscli --upgrade --user

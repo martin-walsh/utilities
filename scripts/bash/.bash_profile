@@ -1,5 +1,5 @@
 export M2_HOME=/usr/local/apache-maven-2.2.1
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/X11/bin:$GRAILS_HOME/bin:$GROOVY_HOME/bin:/usr/local/mysql/bin:/Users/martinwalsh/bin:$M2_HOME/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/X11/bin:$GRAILS_HOME/bin:$GROOVY_HOME/bin:/usr/local/mysql/bin:/Users/martinwalsh/bin:$M2_HOME/bin:~/Library/Python/2.7/bin/
 export HISTCONTROL=ignoredups
 export HISTSIZE=10000
 # export PS1='\[\033[01;32m\]\h\[\033[01;34m\] \W\[\033[31m\]$(__git_ps1 " {%s}") \[\033[01;34m\]\u\$\[\033[00m\] ' # WITH COLOUR
