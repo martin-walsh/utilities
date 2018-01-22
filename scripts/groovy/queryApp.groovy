@@ -14,8 +14,6 @@ String homeDir = System.getProperty('user.home')
 
 List<Map> locations = [
     [box: 'TPI', dir: new File("$homeDir/code/config-tpi")],
-    [box: 'SYS', dir: new File("$homeDir/code/config-sys")],
-    [box: 'UAT', dir: new File("$homeDir/code/config-uat")],
     [box: 'CMBETA', dir: new File("$homeDir/code/config-cmbeta")],
     [box: 'STG', dir: new File("$homeDir/code/config-stg")],
     [box: 'AU', dir: new File("$homeDir/code/config-au")],
@@ -24,7 +22,7 @@ List<Map> locations = [
 
 println()
 
-locations.each { Map config ->
+locations.findAll { Map config -> config.dir.exists() }.each { Map config ->
     def grailsYamlText = new File(config.dir, 'conf/apps/grails.yaml').text.readLines()
 
     def appLines = grailsYamlText.findAll { it.contains(appName) }
