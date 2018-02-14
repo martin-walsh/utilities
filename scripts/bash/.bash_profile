@@ -45,10 +45,6 @@ alias gmi="grails maven-install"
 alias gug="gvm use grails"
 alias gti="git"
 
-alias tspc="thor siteminder:project:compile"
-alias tspcl="thor siteminder:project:clear_script_cache"
-alias tsup="thor siteminder:project:update_plugins"
-
 alias gmc="git st; sublime ."
 
 alias resetIntelliJLayout="groovy ~/bin/resetIntelliJLayout"
