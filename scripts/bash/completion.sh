@@ -26,10 +26,10 @@ _complete_cdi_folders () {
 complete -o nospace -F _complete_cdi_folders cdi
 
 # Completion for cdr
-_complete_cdr_folders () {
-	_complete `ls ~/code/ | grep reloaded- | cut -d '-' -f 2`
+_complete_cdo_folders () {
+	_complete `ls ~/code/ | grep infrastructure- | cut -d '-' -f 2`
 }
-complete -o nospace -F _complete_cdr_folders cdr
+complete -o nospace -F _complete_cdo_folders cdo
 
 # Completion for cdp
 _complete_cdp_folders () {

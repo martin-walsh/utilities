@@ -40,8 +40,8 @@ function cdi {
 	goto 'code' "integration-$1"
 }
 
-function cdr {
-	goto 'code' "reloaded-$1"
+function cdo {
+	goto 'code' "infrastructure-$1"
 }
 
 function cdp {
