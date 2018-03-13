@@ -11,5 +11,5 @@ script_dir=$(dirname "$0")
 
 pushd $script_dir > /dev/null
 scp .inputrc $1:~
-scp bash_aliases $1:~
+scp .bash_aliases $1:~
 popd > /dev/null
