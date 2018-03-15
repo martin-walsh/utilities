@@ -65,6 +65,8 @@ if [[ -z /usr/local/bin/brew ]]; then
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+brew install gnu-sed --default-names
+
 rm `brew --prefix`/etc/bash_completion.d/kubectl
 brew install kubectl
 
