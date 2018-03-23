@@ -55,6 +55,7 @@ Host *
     UseKeychain yes
     AddKeysToAgent yes
     IdentityFile ~/.ssh/id_rsa
+    ServerAliveInterval 15
 """
 
 sshConfigFile.write staticConfigLines
