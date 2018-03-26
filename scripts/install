@@ -36,6 +36,7 @@ ln -s -f -v $BASEDIR/bash/git-prompt.sh ~/bin/lib/git-prompt.sh
 ln -s -f -v $BASEDIR/bash/git-scripts.sh ~/bin/lib/git-scripts.sh
 ln -s -f -v $BASEDIR/bash/initialize-java-version.sh ~/bin/lib/initialize-java-version
 ln -s -f -v $BASEDIR/bash/switch-java.sh ~/bin/lib/switch-java
+ln -s -f -v $BASEDIR/bash/switch-python.sh ~/bin/lib/switch-python
 ln -s -f -v $BASEDIR/bash/ssh-completion.sh ~/bin/lib/ssh-completion
 
 # GIT scripts:

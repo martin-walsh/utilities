@@ -50,6 +50,7 @@ alias gmc="git st; sublime ."
 alias resetIntelliJLayout="groovy ~/bin/resetIntelliJLayout"
 alias xmlToClosure="groovy ~/bin/xmlToClosure"
 alias switch-java="source $HOME/bin/lib/switch-java $@"
+alias switch-python="source $HOME/bin/lib/switch-python $@"
 
 source $HOME/bin/lib/ssh-aliases.sh
 
