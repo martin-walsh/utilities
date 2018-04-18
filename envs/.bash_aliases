@@ -2,6 +2,18 @@
 
 echo "Setting up boot & linkboot scripts"
 
+pullconfig() {
+	pushd /usr/local/siteminder/ > /dev/null
+
+	if [[ -z "$1" ]]; then
+		bin/synchronize-config.sh
+	else
+		bin/synchronize-config.sh config-$1
+	fi
+
+	popd > /dev/null
+}
+
 boot() {
 	pushd /usr/local/siteminder/ > /dev/null
 	bin/spring-boot.sh "conf/hosts/$(hostname)/$1" $2
@@ -13,6 +25,17 @@ linkboot() {
 	bin/spring-boot-link.sh "conf/hosts/$(hostname)/$1"
 	popd > /dev/null
 }
+
+_complete_pullconfig () {
+	COMPREPLY=()
+	cur="${COMP_WORDS[COMP_CWORD]}"
+
+	opts=("cmbeta")
+	COMPREPLY=( $(compgen -W "$opts" -- $cur))
+
+	return 0
+}
+complete -o nospace -F _complete_pullconfig pullconfig
 
 _complete_boot () {
 	COMPREPLY=()
