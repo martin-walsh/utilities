@@ -2,6 +2,10 @@
 
 echo "Setting up boot & linkboot scripts"
 
+apptail() {
+	tail -100f /usr/local/siteminder/var/log/$1
+}
+
 pullconfig() {
 	pushd /usr/local/siteminder/ > /dev/null
 
@@ -25,6 +29,14 @@ linkboot() {
 	bin/spring-boot-link.sh "conf/hosts/$(hostname)/$1"
 	popd > /dev/null
 }
+_complete_apptail () {
+	COMPREPLY=()
+	cur="${COMP_WORDS[COMP_CWORD]}"
+	files=`ls /usr/local/siteminder/var/log/ | egrep '*.log$'`
+	COMPREPLY=( $(compgen -W "$files" -- $cur))
+	return 0
+}
+complete -o nospace -F _complete_apptail apptail
 
 _complete_pullconfig () {
 	COMPREPLY=()
