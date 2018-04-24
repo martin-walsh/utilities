@@ -5,11 +5,13 @@ if [ $# -eq 0 ]; then
 	exit 1
 fi
 
-echo "Deploying aliases & completion etc to $1"
-
 script_dir=$(dirname "$0")
 
 pushd $script_dir > /dev/null
-scp .inputrc $1:~
-scp .bash_aliases $1:~
+for box in "$@"; do
+	echo "Deploying aliases & completion etc to $box"
+
+	scp .inputrc $box:~
+	scp .bash_aliases $box:~
+done
 popd > /dev/null
