@@ -63,7 +63,7 @@ _complete_boot () {
 
 	return 0
 }
-complete -o nospace -F _complete_boot boot
+complete -F _complete_boot boot
 
 _complete_linkboot () {
 	COMPREPLY=()
