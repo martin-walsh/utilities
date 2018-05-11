@@ -10,6 +10,12 @@ elif [[ "$1" == "8" ]]; then
 
 	export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
+elif [[ "$1" == "10" ]]; then
+	printf "Switching to Java 10...\n"
+	JDK_VERSION="10"
+
+	export JAVA_HOME=`/usr/libexec/java_home -v 10`
+
 fi
 
 if [[ -z "$JDK_VERSION" ]]; then
