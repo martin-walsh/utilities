@@ -19,7 +19,7 @@ elif [[ "$1" == "10" ]]; then
 fi
 
 if [[ -z "$JDK_VERSION" ]]; then
-	printf "Java version must be 7 or 8, was '$1':\n"
+	printf "Java version must be 7, 8 or 10, was '$1':\n"
 else
 	unset JDK_VERSION
 fi
