@@ -11,7 +11,6 @@ pushd $script_dir > /dev/null
 for box in "$@"; do
 	echo "Deploying aliases & completion etc to $box"
 
-	scp .inputrc $box:~
-	scp .bash_aliases $box:~
+	scp .inputrc .bash_aliases $box:~
 done
 popd > /dev/null
