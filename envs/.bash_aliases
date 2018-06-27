@@ -29,6 +29,33 @@ linkboot() {
 	bin/spring-boot-link.sh "conf/hosts/$(hostname)/$1"
 	popd > /dev/null
 }
+
+tomcat() {
+	pushd /usr/local/siteminder/ > /dev/null
+	bin/$2-engine.sh "engines/$1"
+	popd > /dev/null
+}
+
+tcsummary() {
+	pushd /usr/local/siteminder/ > /dev/null
+	bin/synchronize-summary.rb
+	popd > /dev/null
+}
+
+tctail() {
+	tail -100f "/usr/local/siteminder/var/log/catalina.$1.out"
+}
+
+tcping() {
+	ps -ef | grep "[e]ngines/$1"
+}
+
+linktomcat() {
+	pushd /usr/local/siteminder/ > /dev/null
+	bin/synchronize-webapps.sh "engines/$1"
+	popd > /dev/null
+}
+
 _complete_apptail () {
 	COMPREPLY=()
 	cur="${COMP_WORDS[COMP_CWORD]}"
@@ -42,7 +69,7 @@ _complete_pullconfig () {
 	COMPREPLY=()
 	cur="${COMP_WORDS[COMP_CWORD]}"
 
-	opts=("cmbeta")
+	opts=("cmbeta tpi")
 	COMPREPLY=( $(compgen -W "$opts" -- $cur))
 
 	return 0
@@ -73,3 +100,32 @@ _complete_linkboot () {
 	return 0
 }
 complete -o nospace -F _complete_linkboot linkboot
+
+
+_complete_tomcat () {
+	COMPREPLY=()
+	cur="${COMP_WORDS[COMP_CWORD]}"
+
+	if [ $COMP_CWORD -eq 1 ]; then
+		files=`find /usr/local/siteminder/conf/hosts/$(hostname) -type f -name engine-*.yaml -exec basename {} .yaml \;`
+		COMPREPLY=( $(compgen -W "$files" -- $cur))
+	elif [ $COMP_CWORD -eq 2 ]; then
+		opts=("start stop")
+		COMPREPLY=( $(compgen -W "$opts" -- $cur))
+	fi
+
+	return 0
+}
+complete -o nospace -F _complete_tomcat tomcat
+
+_complete_linktomcat () {
+	COMPREPLY=()
+	cur="${COMP_WORDS[COMP_CWORD]}"
+	files=`find /usr/local/siteminder/conf/hosts/$(hostname) -type f -name engine-*.yaml -exec basename {} .yaml \;`
+	COMPREPLY=( $(compgen -W "$files" -- $cur))
+	return 0
+}
+
+complete -o nospace -F _complete_linktomcat linktomcat
+complete -o nospace -F _complete_linktomcat tctail
+complete -o nospace -F _complete_linktomcat tcping
