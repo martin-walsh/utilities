@@ -50,6 +50,12 @@ tcping() {
 	ps -ef | grep "[e]ngines/$1"
 }
 
+tcexplode() {
+	pushd /usr/local/siteminder/ > /dev/null
+	bin/synchronize-exploded.sh
+	popd > /dev/null
+}
+
 linktomcat() {
 	pushd /usr/local/siteminder/ > /dev/null
 	bin/synchronize-webapps.sh "engines/$1"
