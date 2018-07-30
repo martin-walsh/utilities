@@ -14,6 +14,7 @@ ln -s -f -v $BASEDIR/bash/test-report.sh ~/bin/test-report
 ln -s -f -v $BASEDIR/bash/clean-target-dir.sh ~/bin/cleanTarget
 ln -s -f -v $BASEDIR/bash/clean-all-targets.sh ~/bin/cleanAllTargets
 ln -s -f -v $BASEDIR/bash/reset-ssh.sh ~/bin/reset-ssh
+ln -s -f -v $BASEDIR/bash/g_version.sh ~/bin/g_version
 ln -s -f -v $BASEDIR/bash/sb_version.sh ~/bin/sb_version
 ln -s -f -v $BASEDIR/bash/intellij.sh ~/bin/intellij
 ln -s -f -v $BASEDIR/bash/init-terraform.sh ~/bin/init-terraform
