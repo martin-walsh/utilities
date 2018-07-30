@@ -3,7 +3,7 @@
 echo "Setting up boot & linkboot scripts"
 
 apptail() {
-	tail -100f /usr/local/siteminder/var/log/$1
+	tail -f /usr/local/siteminder/var/log/$1
 }
 
 pullconfig() {
