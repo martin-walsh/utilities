@@ -18,6 +18,7 @@ source $HOME/bin/lib/env.sh
 
 source $HOME/bin/lib/ssh-completion
 source $HOME/bin/lib/cd-scripts.sh
+source $HOME/bin/lib/version-scripts.sh
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
